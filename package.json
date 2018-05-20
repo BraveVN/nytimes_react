@@ -37,6 +37,7 @@
     "eslint-config-xo-space": "^0.15.0",
     "eslint-loader": "^1.6.1",
     "eslint-plugin-react": "^6.10.0",
+    "express": "^4.16.3",
     "extract-text-webpack-plugin": "^2.0.0-rc.3",
     "faker": "^4.1.0",
     "gulp": "gulpjs/gulp#4ed9a4a3275559c73a396eff7e1fde3824951ebb",
