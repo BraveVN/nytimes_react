@@ -5036,14 +5036,14 @@ class Home extends React.Component {
             null,
             React.createElement(
               Col,
-              { xs: 12, md: 6 },
+              { xs: 12, md: 8 },
               React.createElement(Articles, null),
+              React.createElement(MovieReviews, null),
               React.createElement(Books, null)
             ),
             React.createElement(
               Col,
-              { xs: 12, md: 6 },
-              React.createElement(MovieReviews, null),
+              { xs: 12, md: 4 },
               React.createElement(TopStories, null)
             )
           )
@@ -6154,6 +6154,11 @@ class Article extends React.Component {
         this.state.article.headline.main
       ),
       React.createElement(
+        'div',
+        { className: 'media' },
+        this.getMediaUrl()
+      ),
+      React.createElement(
         'p',
         { className: 'date' },
         'Published: ',
@@ -6668,6 +6673,11 @@ class Review extends React.Component {
         this.state.review.headline
       ),
       React.createElement(
+        'div',
+        { className: 'media' },
+        React.createElement('img', { src: this.state.review.multimedia.src })
+      ),
+      React.createElement(
         'p',
         { className: 'date' },
         'Published: ',
@@ -6715,7 +6725,11 @@ class Review extends React.Component {
               'The New York Times'
             )
           ),
-          React.createElement('img', { src: this.state.review.multimedia.src })
+          React.createElement(
+            'div',
+            { className: 'media' },
+            React.createElement('img', { src: this.state.review.multimedia.src })
+          )
         ),
         React.createElement(
           Modal.Footer,
@@ -6823,6 +6837,11 @@ class Story extends React.Component {
         'h4',
         null,
         this.state.story.title
+      ),
+      React.createElement(
+        'div',
+        { className: 'media' },
+        this.getMediaUrl()
       ),
       React.createElement(
         'p',
